@@ -49,20 +49,21 @@ function formatData(data) {
  */
 function filtered(childrens, values, index) {
   let res = [];
+
   if (values[index]) {
     for (let i = 0; i < childrens.length; i++) {
       const depNum = childrens[i].parentElement.name.split(" ")[1];
+
       if (!depNum.includes(values[index])) {
         childrens[i].display = "none";
         childrens[i].match = false;
       } else {
         childrens[i].display = "block";
-        if (depNum === values[index] && !values[index + 1]) {
+        if (!values[index + 1]) {
           childrens[i].match = true;
         } else {
           childrens[i].match = false;
         }
-
         if (childrens[i].childrens) {
           res = childrens[i].childrens;
         }
@@ -74,24 +75,8 @@ function filtered(childrens, values, index) {
     }
   } else {
     for (let i = 0; i < childrens.length; i++) {
-      const depNum = childrens[i].parentElement.name.split(" ")[1];
-      if (!depNum.includes(values[index])) {
-        childrens[i].display = "block";
-        if (depNum === values[index]) {
-          childrens[i].match = true;
-        } else {
-          childrens[i].match = false;
-        }
-      } else {
-        childrens[i].match = false;
-        if (childrens[i].childrens) {
-          res = childrens[i].childrens;
-        }
-      }
-    }
-
-    if (res.length) {
-      filtered(res, values, ++index);
+      childrens[i].display = "block";
+      childrens[i].match = false;
     }
   }
 }
