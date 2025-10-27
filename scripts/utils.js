@@ -59,6 +59,7 @@ function filtered(childrens, values, index) {
         childrens[i].match = false;
       } else {
         childrens[i].display = "block";
+        childrens[i].open = true;
         if (!values[index + 1]) {
           childrens[i].match = true;
         } else {
@@ -77,6 +78,7 @@ function filtered(childrens, values, index) {
     for (let i = 0; i < childrens.length; i++) {
       childrens[i].display = "block";
       childrens[i].match = false;
+        childrens[i].open = false;
     }
   }
 }
