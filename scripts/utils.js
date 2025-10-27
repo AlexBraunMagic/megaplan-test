@@ -1,5 +1,5 @@
 /**
- *
+ * Функция получения дочерних элементов
  * @param {*} allChildren массив всех дочерних элементов
  * @param {*} data массив всех элементов
  * @returns
@@ -22,7 +22,7 @@ function getChildren(allChildren, data) {
 }
 
 /**
- *
+ * Функция форматирования данных
  * @param {*} data  массив всех элементов
  * @returns
  */
@@ -42,7 +42,7 @@ function formatData(data) {
 }
 
 /**
- *
+ * Функция фильтрации данных при поиске
  * @param {*} childrens все дочерние элементы
  * @param {*} values массив всех введённых значений инпута
  * @param {*} index индекс значения из массива values
@@ -161,7 +161,7 @@ function createIcon(path) {
 }
 
 /**
- *
+ * Функция добавления и создания элементов.
  * @param {*} data Элементы меню
  * @param {*} idElement ID элемента
  * @param {*} index Индекс элемента
