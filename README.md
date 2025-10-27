@@ -16,4 +16,4 @@
 ### Клонирование проекта
 
 ```bash
-git clone https://github.com/alexgrechanikdev/megaplan-test
+git clone https://github.com/AlexBraunMagic/megaplan-test
