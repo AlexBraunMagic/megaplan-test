@@ -27,18 +27,18 @@ function getChildren(allChildren, data) {
  * @returns
  */
 function formatData(data) {
-  const parents = data.filter((item) => item.parent === null);
-
-  return parents.map((currentParent) => ({
-    match: false,
-    open: false,
-    display: "block",
-    parentElement: currentParent,
-    childrens: getChildren(
-      data.filter((item) => item.parent === currentParent.id),
-      data
-    ),
-  }));
+  return data
+    .filter((item) => item.parent === null)
+    .map((currentParent) => ({
+      match: false,
+      open: false,
+      display: "block",
+      parentElement: currentParent,
+      childrens: getChildren(
+        data.filter((item) => item.parent === currentParent.id),
+        data
+      ),
+    }));
 }
 
 /**
